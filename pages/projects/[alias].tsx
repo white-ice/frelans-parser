@@ -32,8 +32,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		headers: headers
 	})
 
-	console.log('Projects', projects);
-	console.log('Skills', skills);
+	// console.log('Projects', projects);
+	// console.log('Skills', skills);
 
 
 	return {
