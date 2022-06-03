@@ -28,14 +28,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		headers: headers
 	})
 
-	const { data: skills } = await axios.get<SkillModel[]>(process.env.NEX_PUBLIC_DOMAIN + '/v2/skills/', {
-		headers: headers
-	})
-
-	// console.log('Projects', projects);
-	// console.log('Skills', skills);
-
-
 	return {
 		paths: projects.data.flatMap(m => '/projects/' + m.id),
 		fallback: true
