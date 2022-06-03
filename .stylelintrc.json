@@ -1,0 +1,34 @@
+{
+	"extends": [
+		"stylelint-config-standard"
+	],
+	"plugins": [
+		"stylelint-order",
+		"stylelint-selector-bem-pattern"
+	],
+	"rules": {
+		"plugin/selector-bem-pattern": {
+			"componentName": "[A-Z]+",
+			"componentSelectors": {
+				"initial": "^\\.{componentName}(?:-[a-z]+)?$",
+				"combined": "^\\.combined-{componentName}-[a-z]+$"
+			},
+			"utilitySelectors": "^\\.util-[a-z]+$"
+		},
+		"order/order": [
+			"custom-properties",
+			"declarations"
+		],
+		"order/properties-order": [
+			"width",
+			"height"
+		],
+		"indentation": [
+			"tab",
+			{
+				"baseIndentLevel": 2
+			}
+		],
+		"color-hex-case": "upper"
+	}
+}
