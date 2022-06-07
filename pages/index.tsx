@@ -59,7 +59,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 	const headers = {
 		"Content-Type": "application/json",
 		"Accept": "application/json",
-		'Authorization': 'Bearer a18116fb8f9260884e7631eb85257f7107f97bb6'
+		'Authorization': 'Bearer ' + process.env.API_KEY
 	}
 	const { data: countries } = await axios.get<Countries[]>(process.env.NEX_PUBLIC_DOMAIN + '/v2/countries/', {
 		headers: headers
